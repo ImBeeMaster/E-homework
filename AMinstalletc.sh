@@ -20,7 +20,7 @@ echo '127.0.0.1 readyplayerone.com' #<should add content check
     fi
  chown -R myqsl:myqsl /var/lib/mysql #<check the directory to be existed
  chown -R apache:apache /var/www #<check the directory to be existed
- systemctl run httpd.service
+ systemctl enable httpd.service
  systemctl start httpd.service
- systemctl run httpd.service
+ systemctl enable httpd.service
  systemctl start mariadb.service
