@@ -11,7 +11,7 @@ yum install -y mysql mariadb-server 2>&1 1>/dev/null #<add exit status to the lo
 echo '127.0.0.1 readyplayerone.com' #<should add content check
         
         
-    if [[ -e /etc/httpd/conf/httpd.conf ]] then
+    if [[ -e /etc/httpd/conf/httpd.conf ]]; then
     #this should be parsed with sed: /etc/httpd/conf/httpd.conf
     ##should add parse for server name
         sed -i "s/Listen/Listen 8080/" /etc/httpd/conf/httpd.conf #<can use postional parameter here for port to be specified
